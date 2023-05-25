@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152404059-1"></script>
+		<script>
+		  		window.dataLayer = window.dataLayer || [];
+		  		function gtag(){dataLayer.push(arguments);}
+		  		gtag('js', new Date());
+
+		  		gtag('config', 'UA-152404059-1');
+		</script>
+
+	<title>Siti - Agent Entry Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- meta http-equiv = "refresh" content = "0; url = https://sri-tech.com/subscribe.html" / -->
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+	  	<meta name="Siti Collection Entry Web Application" content="A data entry form for Siti Communications Group Agents">
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form id="data-entry" class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Siti Collection Agent Entry Form - City B
+				</span>
+				<div class="wrap-input100 bg1 rs1-wrap-input100 validate-input" data-validate = "Enter VC Number">
+					<span class="label-input100">VC Number</span>
+					<input class="input100" type="text" maxlength="11" name="vc_no" id="vc_no" placeholder="Enter VC Number" required>
+				</div>
+			<div class="container-contact100-form-btn space">
+				<button class="contact100-form-btn">
+					<span>
+						<a onclick='customerSearch()' id="search">Validate VC</a>
+						<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+					</span>
+				</button>
+			</div>
+
+		<div id="toggleDIV">
+
+			<div class="wrap-contact100">
+				<span id="customer_details">
+								<ul class="label-input100">
+									<p>Customer VC -</p>
+									<li id="c_vc" class="input100"></li>
+									<p>Customer Name -</p>
+									<li id="c_name" class="input100"></li>
+									<p>Customer Phone -</p>
+									<li id="c_phone" class="input100"></li>
+									<p>Due Date -</p>
+									<li id="d_d" class="input100"></li>
+								</ul>
+				</span>
+		</div>
+
+		<div class="wrap-input100 rs1-wrap-input100 validate-input bg1" data-validate="Please Type Receipt Number">
+			<span class="label-input100">Receipt Number *</span>
+			<input id="rec_no" class="input100" type="number" name="receipt" placeholder="Enter Receipt Number" required>
+		</div>
+
+		<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
+			<span class="label-input100">Package *</span>
+			<input id="pkg" class="input100" name="package" placeholder="Customer package choice" placeholder="Enter Amount Paid" required>
+		</div>
+
+		<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Amount Paid by Customer">
+			<span class="label-input100">Amount *</span>
+			<input id="amt" class="input100" type="text" maxlength="4" name="amount" placeholder="Enter Amount Paid " required>
+		</div>
+
+		<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Number of months">
+			<span class="label-input100">Number of months *</span>
+			<input id="months" class="input100" type="text" maxlength="2" name="months" placeholder="Enter Number of Months " required>
+		</div>
+
+		<div class="wrap-input100 bg0 rs1-alert-validate">
+			<span class="label-input100">Remarks</span>
+			<textarea id="rem" class="input100" name="remarks" placeholder="Your message here..."></textarea>
+		</div>
+
+		<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter PIN to submit">
+			<span class="label-input100">PIN *</span>
+			<input class="input100" type="number" id="password-3" pattern="[0-9]*" name="agent_name" placeholder="Enter Your PIN " required>
+		</div>
+
+		<div class="container-contact100-form-btn-auth">
+						<button class="contact100-form-btn">
+							<span>
+								<a onclick="agentAuth()">Authenticate PIN</a>
+								<i aria-hidden="true"></i>
+							</span>
+						</button>
+		</div>
+	</div>
+		<div id="toggleDIV2">
+					<div class="container-contact100-form-btn-sub">
+					<button class="contact100-form-btn">
+						<span>
+						<a id="submit-form"  onclick="onclickFunction()">Submit Entry</a>
+						<i aria-hidden="true"></i>
+					</span>
+				</button>
+				</div>
+		</div>
+
+		<div id="toggleDIV3">
+			<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter ID">
+				<span class="label-input100">ID*</span>
+				<input class="input100" type="text" id="login" name="login" placeholder="Enter Your ID" required>
+			</div>
+		</div>
+
+			</form>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script type="text/javascript" src="js/tld-data.js"></script>
+</body>
+</html>

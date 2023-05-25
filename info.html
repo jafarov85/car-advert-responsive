@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	 	 <title>Avtomobil Elanları-Qaraj</title>
+
+     <!-- CSS sheets and fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="Resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="Resources/css/responsive.css">
+	</head>
+
+  <!-- Calling function on page load to display the corresponding car data -->
+	<body onload="set_car_info_on_pop_info()">
+		<section class="info-page">
+
+      <!-- Navigation bar -->
+				<nav>
+	  				<ul class= "nav-options anim">
+						<li><a href="#" onclick="sign_in()">Daxil Ol</a></li>
+            <!-- Called function to display alert message when sign in is clicked by user -->
+						<li><a href="#pop-up-form">Bizimlə Əlaqə</a></li>
+					</ul>
+
+					<a href="index.html"><img src="Resources/css/img/logo1.png" alt="Car Adverts logo" class="logo"></a>
+				</nav>
+
+			<!-- Slideshow -->
+			<section class="slideshow">
+			  <div class="slides">
+			    <img id="car-pic-1">
+			  </div>
+
+			  <div class="slides">
+			    <img id="car-pic-2">
+			  </div>
+
+			  <div class="slides">
+			    <img id="car-pic-3">
+			  </div>
+
+				<div class="slides">
+			    <img id="car-pic-4">
+			  </div>
+
+				<div class="slides">
+			    <img id="car-pic-5">
+			  </div>
+
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- Function call for changing slides -->
+			<div style="text-align:center">
+			  <span class="circle" onclick="currentSlide(1)"></span>
+			  <span class="circle" onclick="currentSlide(2)"></span>
+			  <span class="circle" onclick="currentSlide(3)"></span>
+				<span class="circle" onclick="currentSlide(4)"></span>
+				<span class="circle" onclick="currentSlide(5)"></span>
+		</section>
+
+      <!-- Car details -->
+			<section class="info">
+				<h2>Avtomobil Haqqında</h2>
+	      			<h4>Marka&#58;</h4>
+						<p id='car_company'></p>
+	      			<h4>Model&#58;</h4>
+						<p id="car_model">Model&#58;</p>
+	      			<h4>İstehsal ili&#58;</h4>
+						<p id="car_year">Year</p>
+	      			<h4>Satıcı&#58;</h4>
+						<p id="car_distributor">Distributor</p>
+	      			<h4>Qiymət&#58;</h4>
+						<p id="car_price">Price</p>
+	      			<h4>Ətraflı Məlumat&#58;</h4>
+	      				<p id="car_description"></p>
+
+              <!-- Contact us and go back button -->
+	      			<a href="index.html" class="info-btn">Geri</a>
+	      			<a href="#pop-up-form" class="info-btn">Yeni Elan</a>
+			</section>
+
+        <!-- Contact us pop up -->
+	  		<div class="pop-up" id="pop-up-form">
+	      		<div class="pop-up-content">
+	        		<h2>Şəxsi Bilgilərinizi Daxil Edin.</h2>
+                <!-- Name -->
+	        			<div class="pop-up-text">
+	          				<h3>Adınız <span class="star">&#10036;</span></h3>
+	          					<form>
+	          						<input type="text" value="" placeholder="Adınız" class="pop-up-textbox" id="name">
+	          					</form>
+	        			</div>
+
+                <!-- Email -->
+	      				<div class="pop-up-text">
+	        				<h3>Email <span class="star">&#10036;</span></h3>
+	        					<form>
+	           						<input type="email" value="" name="email" placeholder="Email " class="pop-up-textbox" id="email">
+	          					</form>
+	      				</div>
+
+                <!-- Phone -->
+	      				<div class="pop-up-text">
+	        				<h3>Telefon <span class="star">&#10036;</span></h3>
+	        					<form>
+	        						<input type="text" value="" placeholder="Telefon " class="pop-up-textbox" id="phone">
+	        					</form>
+	      				</div>
+
+              <!-- Options -->
+	     				<div class="pop-up-text">
+	        				<h3>Mən İstəyirəm</h3>
+	       						<form>
+	  								<input type="radio" name="option" value="" class="pop-up-radio"> Avtomobil Almaq<br>
+	  								<input type="radio" name="option" value="" class="pop-up-radio"> Avtomobil Satmaq<br>
+	  								<input type="radio" name="option" value="" class="pop-up-radio"> Digər
+	  							</form>
+	  					</div>
+
+         
+
+                <!-- Comments -->
+	      				<div class="pop-up-text">
+	       					 <h3>Yorum Yaz</h3>
+	        					<form>
+	        						<input type="text" value="" placeholder="Ətraflı Məlumat" id='message' class="pop-up-message" >
+	        					</form>
+	      				</div>
+
+                <!-- Submit and return buttons -->
+	        			<a href="#pop-up" class="popup-btn" onclick='clear_form()'>Geri</a>
+                <!-- Called function to clear user input after user enters all details -->
+	        			<a href="#pop-up" class="popup-btn" id="contact-btn" onclick="message()">Göndər</a>
+                <!-- Called function to respond to submitted input by user on the contact us form -->
+	     		</div>
+	    	</div>
+
+		</section>
+		<!-- Footer -->
+		<footer>
+				<div>
+					<p>Bütün Hüquqlar S.Jafarov Tərəfindən qorunur. <br>Avtomobil elanları 2023 <br>Version 1.0</p>
+				</div>
+		</footer>
+
+    <!-- Javascript files -->
+		<script type="text/javascript" src="Resources/js/contact_us.js"></script>
+		<script type="text/javascript" src="Resources/js/car_data.js"></script>
+		<script type="text/javascript" src="Resources/js/changepic.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="az">
+	<head>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152404059-1"></script>
+		<script>
+		  		window.dataLayer = window.dataLayer || [];
+		  		function gtag(){dataLayer.push(arguments);}
+		  		gtag('js', new Date());
+
+		  		gtag('config', 'UA-152404059-1');
+		</script>
+
+		<!-- Fav icon -->
+			<link rel="icon" href="Resources/css/img/icon1.png">
+
+		<!-- Not allowing browser to cache website files for ease of debugging during website development -->
+	  	<meta http-equiv=“Pragma” content=”no-cache”>
+	  	<meta http-equiv=“Expires” content=”-1″>
+	  	<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+
+			<meta name="Srikanth" content="Web & Mobile Applications CA1, DBS 2019">
+			<meta charset="utf-8">
+			<meta name="viewpoint" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+			<title>Avtomobil Elanları</title>
+
+    <!-- CSS sheets and fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="Resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="Resources/css/responsive.css">
+
+	</head>
+
+  <!-- Calling function to load all car pictures and details -->
+	<body onload="start()">
+    <section class="hero-section">
+		<header>
+			<!-- Navigation bar -->
+			<nav id="nav-bar">
+				<div class="hero">
+					<ul class="nav-options anim">
+						<li><a href="#" onclick="sign_in()">Daxil Ol</a></li>
+            <!-- Called function to display alert message when sign in is clicked by user -->
+			 		</ul>
+
+					<a href="index.html"><img src="Resources/css/img/logo1.png" alt="Car Adverts logo" class="logo"></a>
+				</div>
+			</nav>
+
+			<!-- Video -->
+			<video autoplay muted loop class="video" id="video">
+				<source src="Resources/css/videos/background2.mp4" type="video/mp4">
+			</video>
+
+			<!-- Search -->
+			<div class="search">
+				<input type="search" placeholder="Avtomobilin adını və ya istehsal tarixini daxil edin" class="search-feild" id='search-input'/>
+				<a href="#inventory"  class="search-btn" id='search-form'>Axtar</a>
+			</div>
+
+			<!-- Page title -->
+			<div class="content">
+				<h1>AVTO</h1>
+				<p>Başlayın. . .</p>
+				<button class="pause-btn" onclick="playback()" id="video-btn">Videonu Durdur</button>
+			</div>
+		</header>
+    </section>
+
+		<!-- Cars inventory section -->
+		<section id='inventory'>
+
+			<div>
+
+				<!-- car 1 slide front-->
+				<div class="car" id='car-1'>
+					<div class="display display-front">
+						<img  id="car-pic-1" class="car-picture" alt="Car 1 picture"/>
+						<h4 id="car1_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car1_model"></li>
+									<p>İl -</p>
+									<li id="car1_year"></li>
+									<p>Satıcı -</p>
+									<li id="car1_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car1_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 1 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car1' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 2 slide front-->
+				<div class="car" id='car-2'>
+					<div class="display display-front">
+						<img  id="car-pic-2" class="car-picture" alt="Car 2 picture"/>
+						<h4 id="car2_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car2_model"></li>
+									<p>İl -</p>
+									<li id="car2_year"></li>
+									<p>Satıcı -</p>
+									<li id="car2_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car2_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 2 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car2' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 3 slide front-->
+				<div class="car" id='car-3'>
+					<div class="display display-front">
+						<img  id="car-pic-3" class="car-picture" alt="Car 3 picture"/>
+						<h4 id="car3_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car3_model"></li>
+									<p>İl -</p>
+									<li id="car3_year"></li>
+									<p>Satıcı -</p>
+									<li id="car3_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car3_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 3 slide back -->
+					<div class="display display-back">
+						<div class="car-info">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 4 slide front-->
+				<div class="car" id='car-4'>
+					<div class="display display-front">
+						<img  id="car-pic-4" class="car-picture" alt="Car 4 picture"/>
+						<h4 id="car4_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car4_model"></li>
+									<p>İl -</p>
+									<li id="car4_year"></li>
+									<p>Satıcı -</p>
+									<li id="car4_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car4_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 4 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car4' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 5 slide front-->
+				<div class="car" id='car-5'>
+					<div class="display display-front">
+						<img  id="car-pic-5" class="car-picture" alt="Car 5 picture"/>
+						<h4 id="car5_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car5_model"></li>
+									<p>İl -</p>
+									<li id="car5_year"></li>
+									<p>Satıcı -</p>
+									<li id="car5_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car5_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 5 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car5' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 6 slide front-->
+				<div class="car" id='car-6'>
+					<div class="display display-front">
+						<img  id="car-pic-6" class="car-picture" alt="Car 6 picture"/>
+						<h4 id="car6_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car6_model"></li>
+									<p>İl -</p>
+									<li id="car6_year"></li>
+									<p>Satıcı -</p>
+									<li id="car6_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car6_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 6 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car6' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 7 slide front-->
+				<div class="car" id='car-7'>
+					<div class="display display-front">
+						<img  id="car-pic-7" class="car-picture" alt="Car 7 picture"/>
+						<h4 id="car7_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car7_model"></li>
+									<p>İl -</p>
+									<li id="car7_year"></li>
+									<p>Satıcı -</p>
+									<li id="car7_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car7_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 7 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car7' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 8 slide front-->
+				<div class="car" id='car-8'>
+					<div class="display display-front">
+						<img  id="car-pic-8" class="car-picture" alt="Car 8 picture"/>
+						<h4 id="car8_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car8_model"></li>
+									<p>İl -</p>
+									<li id="car8_year"></li>
+									<p>Satıcı -</p>
+									<li id="car8_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car8_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 8 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car8' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 9 slide front-->
+				<div class="car" id='car-9'>
+					<div class="display display-front">
+						<img  id="car-pic-9" class="car-picture" alt="Car 9 picture"/>
+						<h4 id="car9_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car9_model"></li>
+									<p>İl</p>
+									<li id="car9_year"></li>
+									<p>Satıcı</p>
+									<li id="car9_distributor"></li>
+									<p>Qiymət -</p>
+									<li id="car9_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 9 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car9' class="search-btn">Daha Çox</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- car 10 slide front-->
+				<div class="car" id='car-10'>
+					<div class="display display-front">
+						<img  id="car-pic-10" class="car-picture" alt="Car 10 picture"/>
+						<h4 id="car10_man"></h4>
+							<div class="car-details">
+								<ul>
+									<p>Model -</p>
+									<li id="car10_model"></li>
+									<p>İl -</p>
+									<li id="car10_year"></li>
+									<p>Satıcı -</p>
+									<li id="car10_distributor"></li>
+									<p>Qiymət - </p>
+									<li id="car10_price"></li>
+								</ul>
+							</div>
+					</div>
+
+					<!-- Car 10 slide back -->
+					<div class="display display-back">
+						<div class="car-info">
+							<a href='info.html?car=car10' class="search-btn">Daha çox</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+	    	<div>
+	      		<p>Bütün Hüquqlar S.Jafarov Tərəfindən qorunur. <br>Avtomobil elanları 2023 <br>Version 1.0</p>
+	    	</div>
+	  	</footer>
+
+    <!-- Javascript files -->
+		<script type="text/javascript" src="Resources/js/animations.js"></script>
+		<script type="text/javascript" src="Resources/js/car_data.js"></script>
+		<script type="text/javascript" src="Resources/js/search.js"></script>
+
+	</body>
+</html>
